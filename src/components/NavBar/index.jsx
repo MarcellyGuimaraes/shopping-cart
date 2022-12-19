@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import CartContext from '../../context/Cart/CartContext'
 
 const Nav = () => {
+  const { cartItems, showHideCart } = useContext(CartContext)
+
   return (
     <nav>
       <div>store</div>
@@ -11,7 +14,12 @@ const Nav = () => {
         </div>
       </div>
       <div>
-        <div>*carrinho*</div>
+        <div onClick={showHideCart}>*carrinho*</div>
+        {cartItems.length > 0 && (
+          <div>
+            <span>{cartItems.length}</span>
+          </div>
+        )}
       </div>
     </nav>
   )
