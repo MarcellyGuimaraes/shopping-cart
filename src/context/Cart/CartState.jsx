@@ -4,12 +4,12 @@ import CartReducer from './CartReducer'
 import { SHOW_HIDE_CART, ADD_TO_CART, REMOVE_ITEM } from '../Types'
 
 const CartState = ({ children }) => {
-  const initialState = {
+  const initalState = {
     showCart: false,
     cartItems: [],
   }
 
-  const [state, dispatch] = useReducer(CartReducer, initialState)
+  const [state, dispatch] = useReducer(CartReducer, initalState)
 
   const addToCart = (item) => {
     dispatch({ type: ADD_TO_CART, payload: item })
