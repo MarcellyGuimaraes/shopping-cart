@@ -14,14 +14,14 @@ const ProductCard = ({ product }) => {
       />
       <div className="px-4 py-3 w-72">
         <span className="text-gray-400 mr-3 uppercase text-xs">
-          <Rating text={`${product.rating} Estrelas`} />
+          <Rating text={`${product.category}`} />
         </span>
         <p className="text-lg font-bold text-black truncate block capitalize">
-          {product.name}
+          {product.title}
         </p>
         <div className="flex items-center">
           <p className="text-lg font-semibold text-black cursor-auto my-3">
-            R$ {product.price}
+            R$ {product.price.toFixed(2)}
           </p>
           <div className="ml-auto" onClick={() => addToCart(product)}>
             <svg

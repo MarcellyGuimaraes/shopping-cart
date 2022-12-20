@@ -17,17 +17,19 @@ const CartItem = ({ item }) => {
         <div>
           <div className="flex justify-between text-base font-medium text-gray-900">
             <h3>
-              <a href="#">{item.name}</a>
+              <a href="#">{item.title}</a>
             </h3>
           </div>
-          <p className="mt-1 text-sm text-gray-500">R${item.price}</p>
+          <p className="mt-1 text-sm text-gray-500">
+            R${item.price.toFixed(2)}
+          </p>
         </div>
         <div className="flex flex-1 items-end justify-between text-sm">
           <div className="flex">
             <button
               type="button"
               className="font-medium text-indigo-600 hover:text-indigo-500"
-              onClick={() => removeItem(item._id)}
+              onClick={() => removeItem(item.id)}
             >
               Remove
             </button>
