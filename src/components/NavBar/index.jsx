@@ -8,9 +8,9 @@ const Nav = () => {
     <nav className="fixed top-0 left-0 right-0 flex items-center justify-center bg-slate-800 p-6 text-white">
       <div className="flex-1">Shopping</div>
       <div className="flex-1 text-slate-300">
-        <div className="items-center justify-center rounded-full bg-white">
+        {/* <div className="items-center justify-center rounded-full bg-white">
           <input className="w-full rounded-full border-none p-1" type="text" />
-        </div>
+        </div> */}
       </div>
       <div className="flex-1">
         <div
